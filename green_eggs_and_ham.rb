@@ -30,4 +30,8 @@ class GreenEggsAndHam
     words.each { |word| frequency[word.downcase] += 1 }
     frequency
   end
+
+  def stanzas
+    stanzas = @text.split(/\n\n/)
+  end
 end
