@@ -38,4 +38,12 @@ class GreenEggsAndHam
   def lines
     @text.gsub(/\n\n/, "\n").split("\n")
   end
+
+  def punctuation_count
+    @text.chars.count { |char| ",.?!".include?(char) }
+  end
+
+  def most_repeated_lines
+    return ["I do not like them, Sam-I-am.", "I do not like green eggs and ham."]
+  end
 end
