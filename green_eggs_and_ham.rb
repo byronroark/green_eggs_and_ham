@@ -12,4 +12,10 @@ class GreenEggsAndHam
     words = @text.gsub(/[,.?!]/,"").split
     words.map { |word| word.downcase }.uniq.sort
   end
+
+  def number_of_words_shorter_than(number)
+    words = @text.gsub(/[,.?!]/, "").split
+    short_words = words.select { |word| word.length < number }
+    short_words.count
+  end
 end
