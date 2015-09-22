@@ -18,4 +18,9 @@ class GreenEggsAndHam
     short_words = words.select { |word| word.length < number }
     short_words.count
   end
+
+  def longest_word
+    words = @text.gsub(/[,.?!]/, "").split
+    words.max { |word| word.length }
+  end
 end
