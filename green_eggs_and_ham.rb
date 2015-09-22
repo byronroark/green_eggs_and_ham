@@ -34,4 +34,8 @@ class GreenEggsAndHam
   def stanzas
     stanzas = @text.split(/\n\n/)
   end
+
+  def lines
+    @text.gsub(/\n\n/, "\n").split("\n")
+  end
 end
